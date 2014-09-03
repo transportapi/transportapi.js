@@ -1,0 +1,23 @@
+{
+  "name": "transportapi.js",
+  "version": "0.0.0",
+  "main": "dist/scripts/transportapi.min.js",
+  "description": "A proxy API to TAPI endpoints",
+  "license": "TODO",
+  "authors": ["TAPI"],
+  "ignore": [
+    "node_modules",
+    "app",
+    "bower.json",
+    "Gruntfile.js",
+    "npm-debug.log",
+    "package.json",
+    "README.md",
+    ".gitignore",
+    "bower_components"
+  ],
+	"dependencies": {
+		"jquery": "~2.1.1"
+	}
+}
+
