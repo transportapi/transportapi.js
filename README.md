@@ -1,5 +1,7 @@
 # transportapi.js [![Bower version](https://badge.fury.io/bo/transportapi.js.svg)](http://badge.fury.io/bo/transportapi.js)
 
+![alt tag](https://avatars2.githubusercontent.com/u/4236076?v=2&s=200)
+
 ## Download
  * [Development](https://raw.github.com/transportapi/transportapi.js/master/dist/scripts/transportapi.js)
  * [Production](https://raw.github.com/transportapi/transportapi.js/master/dist/scripts/transportapi.min.js)
