@@ -1,6 +1,6 @@
 {
   "name": "transportapi.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/scripts/transportapi.min.js",
   "description": "A proxy API to TAPI endpoints",
   "license": "TODO",
@@ -16,7 +16,7 @@
     ".gitignore",
     "bower_components"
   ],
-	"dependencies": {
+	"devDependencies": {
 		"jquery": "~2.1.1"
 	}
 }
