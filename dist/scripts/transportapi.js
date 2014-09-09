@@ -127,19 +127,17 @@
 
       return transportAPIcall(url, successFunction );
     },
-    
+
     // live train information for a train station
     // (or without a prefix it assumes CRS)
     trainLiveStation: function( stationCode, successFunction ) {
-      var url = transportAPIbaseURL + "/uk/train/station/stationCode/" + stationCode + "/live.json?" +
+      var url = transportAPIbaseURL + "/uk/train/station/" + stationCode + "/live.json?" +
         authParams();
 
       console.log( "calling trainLiveStation:" + url );
 
       return transportAPIcall(url, successFunction );
     }
-    
-    
   };
 
 })(window, $);
