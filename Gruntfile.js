@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  'use strict'
+  'use strict';
 
   require('load-grunt-tasks')(grunt);
 
@@ -25,42 +25,21 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      all: ['app/scripts/**/*.js'],
       options: {
-        curly: true,
-        multistr: true,
-        quotmark: 'single',
-        camelcase: false,
-        bitwise: false,
-        unused: true,
-        eqeqeq: true,
-        indent: 2,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        boss: true,
-        es5: true,
-        eqnull: true,
-        evil: true,
-        scripturl: true,
-        smarttabs: true,
-        maxparams: 5,
-        maxdepth: 3,
-        maxlen: 80,
-        globals: {}
-      }
+        jshintrc: '.jshintrc',
+      },
+      all: [
+        'Gruntfile.js',
+        'app/scripts/**/*.js'
+      ]
     }
-
   });
 
   grunt.registerTask('setup', 'build task', function() {
-
     var defaultFiles = [
-          'transportapi'
-        ],
-        args = this.args, customFiles = [], index, i = -1;
+      'transportapi'
+    ],
+    args = this.args, customFiles = [], index, i = -1;
 
     if (args.length) {
       while (++i < args.length) {
@@ -79,7 +58,13 @@ module.exports = function(grunt) {
   });
 
   // TODO Add jshint!
-  grunt.registerTask('build', ['clean:dist', 'setup', 'concat', 'uglify']);
+  grunt.registerTask('build', [
+    'jshint',
+    'clean:dist',
+    'setup',
+    'concat',
+    'uglify'
+  ]);
 
   grunt.registerTask('default', ['build']);
 };

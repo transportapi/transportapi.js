@@ -2,7 +2,7 @@
   "name": "transportapi.js",
   "title": "TransportAPI.js",
   "description": "A Proxy API to the Transport API endpoints",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "TAPI",
   "main": "dist/scripts/transportapi.min.js",
   "license": "TODO",
@@ -14,7 +14,7 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "0.1.11",
-    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-jshint": "~0.9.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-copy": "~0.5.0",
