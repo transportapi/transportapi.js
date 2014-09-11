@@ -155,6 +155,15 @@
       console.log('calling trainLiveStationArrivals:' + url);
 
       return transportAPIcall(url, successFunction);
+    },
+
+    busLiveDepartures: function(atcoCode, successFunction) {
+      var url = transportAPIbaseURL + '/uk/bus/stop/' +
+          atcoCode + '/live.json?' + authParams();
+
+      console.log('calling busLiveDepartures:' + url);
+
+      return transportAPIcall(url, successFunction);
     }
   };
 

@@ -1,6 +1,6 @@
 {
   "name": "transportapi.js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/scripts/transportapi.min.js",
   "description": "A proxy API to TAPI endpoints",
   "license": "TODO",
