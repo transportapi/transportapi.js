@@ -2,7 +2,7 @@
   "name": "transportapi.js",
   "title": "TransportAPI.js",
   "description": "A Proxy API to the Transport API endpoints",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "TAPI",
   "main": "dist/scripts/transportapi.min.js",
   "license": "TODO",
