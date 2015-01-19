@@ -2,12 +2,13 @@
 
 ![alt tag](https://avatars2.githubusercontent.com/u/4236076?v=2&s=200)
 
+TransportAPI.js can be used to talk with the [TAPI endpoints](https://developer.transportapi.com) however...
+
+It is in an early alpha stage of development. It is has very minimal coverage of API functionality, and the funtions/parameters will most likely change. Please discuss with us on the forum before using this library. 
+  
 ## Download
  * [Development](https://raw.github.com/transportapi/transportapi.js/master/dist/scripts/transportapi.js)
  * [Production](https://raw.github.com/transportapi/transportapi.js/master/dist/scripts/transportapi.min.js)
-
-## About TransportAPI.js
-  Can be used to talk with the [TAPI endpoints](https://developer.transportapi.com)
 
 ### Use in sites
 ```html
