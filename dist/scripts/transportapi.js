@@ -20,28 +20,33 @@
 (function(window, $) {
   'use strict';
 
+  var DEFAULT_TIMEOUT = 10000;
+
   var appId = '';
   var apiKey = '';
 
   var transportAPIbaseURL = 'http://transportapi.com/v3';
-  //var transportAPIbaseURL = 'http://162.13.137.133/v3'; //harry's server
 
   //--- Private methods ---
 
   //Auth bit of the URL (added to all URLs)
   var authParams = function() {
-    return 'app_id=' + appId + '&api_key=' + apiKey + '&callback=?';
+    return 'app_id=' + appId + '&api_key=' + apiKey;
   };
 
   //An ajax call to a transportapi endpoint (generic)
   // TODO Couldn't we return promises
   // here instead of passing a callback? ~nickolay@2014-09-03
-  var transportAPIcall = function(url, successFunction) {
+  // We can but it will be breaking change ~nickolay@2016-06-09
+  var transportAPIcall = function(url, successFunction, timeout) {
+    var actualTimeout =
+      (typeof timeout === 'undefined') ? DEFAULT_TIMEOUT : timeout;
+
     return function() {
       $.ajax({
         url : url,
-        dataType : 'jsonp',
-        timeout : 10000
+        dataType : 'json',
+        timeout : actualTimeout
       })
       .done(successFunction)
       .fail(function() {
