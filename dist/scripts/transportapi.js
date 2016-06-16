@@ -142,6 +142,20 @@
       return transportAPIcall(url, successFunction);
     },
 
+    busPerformance: function(codes, successFunction, timeout) {
+      var codesParam = codes.join(',');
+
+      var url = transportAPIbaseURL +
+          '/uk/bus/stops_live_performance.json?' +
+          'stops=' + codesParam + '&' +
+          'stop_detail=true&' +
+          authParams();
+
+      console.log('calling bus stops_live_performance:' + url);
+
+      return transportAPIcall(url, successFunction, timeout);
+    },
+
     // live train information for a train station
     // (or without a prefix it assumes CRS)
     trainLiveStation: function( stationCode, successFunction ) {
